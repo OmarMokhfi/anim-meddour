@@ -58,16 +58,16 @@
 
 @-webkit-keyframes MoveUpDown {
   from {
-    bottom: 40px;
+    bottom: 0px;
   }
   to {
-    bottom: 20px;
+    bottom: -40px;
   }
 }
 
 @-webkit-keyframes MoveDownUp {
   from {
-    bottom: 20px;
+    bottom: 0px;
   }
   to {
     bottom: 40px;

@@ -27,34 +27,49 @@
 }
 
 .parent {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  position: relative;
+  width: 100px;
+  height: 400px;
+  background-color: #0070f3;
+  border-radius: 20px;
   .left,
   .right {
     width: 100px;
     height: 100px;
     background-color: red;
     border-radius: 100%;
+    position: absolute;
+    bottom: 40px;
   }
-  .middle {
-    width: 100px;
-    height: 500px;
-    background-color: #0070f3;
-    border-radius: 20px;
+  .left {
+    left: -100%;
+  }
+  .right {
+    right: -100%;
   }
 }
 .parent:hover {
-  .middle {
-    -webkit-animation: MoveUpDown 1s linear infinite;
+  -webkit-animation: MoveUpDown 0.4s linear infinite;
+  .left,
+  .right {
+    -webkit-animation: MoveDownUp 0.4s linear infinite;
   }
 }
 
 @-webkit-keyframes MoveUpDown {
   from {
-    margin-bottom: -50px;
+    bottom: 40px;
   }
   to {
-    margin-bottom: 0;
+    bottom: 20px;
+  }
+}
+
+@-webkit-keyframes MoveDownUp {
+  from {
+    bottom: 20px;
+  }
+  to {
+    bottom: 40px;
   }
 }

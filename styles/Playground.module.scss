@@ -44,3 +44,17 @@
     border-radius: 20px;
   }
 }
+.parent:hover {
+  .middle {
+    -webkit-animation: MoveUpDown 1s linear infinite;
+  }
+}
+
+@-webkit-keyframes MoveUpDown {
+  from {
+    margin-bottom: -50px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}

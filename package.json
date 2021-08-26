@@ -14,7 +14,6 @@
     "bootstrap": "^4.6.0",
     "framer-motion": "^4.1.17",
     "next": "11.1.0",
-    "node-sass": "^5.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
     "react": "17.0.2",

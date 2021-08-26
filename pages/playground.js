@@ -2,6 +2,10 @@ import styles from "../styles/Playground.module.scss";
 import { motion } from "framer-motion";
 
 function Playground() {
+  const variants = {
+    up: { translateY: "-70%" },
+    down: { translateY: "-60%" },
+  };
   return (
     <div className={[styles.container, "container-fluid"].join(" ")}>
       <div className="row w-100">
@@ -19,7 +23,11 @@ function Playground() {
             "col-lg-9 col-md-7 col-12 mt-lg-0 mt-md-0 mt-5 d-flex justify-content-center align-items-center",
           ].join(" ")}
         >
-          <div className={styles.parent}></div>
+          <motion.div
+            whileHover={{ translateY: ["-30%", "-20%"] }}
+            transition={{ repeat: Infinity }}
+            className={[styles.parent, "mx-auto"].join(" ")}
+          ></motion.div>
           <div className={styles.left}></div>
           <div className={styles.right}></div>
         </div>

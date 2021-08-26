@@ -32,7 +32,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 50%;
-  transform: translateY(-70%);
+  transform: translateY(-30%);
   width: 100px;
   height: 400px;
   background-color: #0070f3;
@@ -46,25 +46,12 @@
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
 }
 .left {
   left: 50%;
-  transform: translateX(-100%);
+  transform: translateY(-50%) translateX(-100%);
 }
 .right {
   left: 50%;
-  transform: translateX(100%);
-}
-.parent:hover {
-  -webkit-animation: MoveUpDown 0.4s linear infinite;
-}
-
-@-webkit-keyframes MoveUpDown {
-  from {
-    transform: translateY(-70%);
-  }
-  to {
-    transform: translateY(-60%);
-  }
+  transform: translateY(-50%) translateX(100%);
 }

@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={[styles.container, "container"].join(" ")}>
+    <div className={[styles.container]}>
       <Head>
         <title>Animation Playground</title>
         <meta
@@ -14,15 +15,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={[styles.main, "row"].join(" ")}>
-        <h1 className={styles.title}>Animation Playground</h1>
+      <main className={[styles.main, "container align-items-center"].join(" ")}>
+        <section className="row justify-content-center">
+          <h1 className={styles.title}>Animation Playground</h1>
 
-        <p className={styles.description}>
-          Animation was requested by{" "}
-          <a href="https://github.com/ghilesmeddour">Ghiles Meddour</a> and made
-          with <a href="https://www.framer.com/developers/">Framer Motion</a>
-        </p>
-      </section>
+          <p className={styles.description}>
+            Animation was requested by{" "}
+            <a
+              href="https://github.com/ghilesmeddour"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ghiles Meddour
+            </a>{" "}
+            and made with{" "}
+            <a
+              href="https://www.framer.com/developers/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Framer Motion
+            </a>
+          </p>
+        </section>
+        <section className="row col-10 mx-auto">
+          <div className="col-lg-6 col-md-6 col-12">
+            <Link href="/basic" passHref={true}>
+              <div
+                className={[styles.card, "card text-center shadow-sm"].join(
+                  " "
+                )}
+              >
+                Basic Animation
+              </div>
+            </Link>
+          </div>
+          <div className="col-lg-6 col-md-6 col-12">
+            <Link href="/playground" passHref={true}>
+              <div
+                className={[styles.card, "card text-center shadow-sm"].join(
+                  " "
+                )}
+              >
+                Advanced Animation
+              </div>
+            </Link>
+          </div>
+        </section>
+      </main>
 
       <footer className={styles.footer}>
         <a

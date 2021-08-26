@@ -19,11 +19,7 @@ function Playground() {
             "col-lg-9 col-md-7 col-12 mt-lg-0 mt-md-0 mt-5 d-flex justify-content-center align-items-center",
           ].join(" ")}
         >
-          <div className={styles.parent}>
-            <div className={styles.left}></div>
-            <div className={styles.middle}></div>
-            <div className={styles.right}></div>
-          </div>
+          <span>Advanced Animation</span>
         </div>
       </div>
     </div>

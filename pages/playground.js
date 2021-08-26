@@ -1,13 +1,17 @@
 import styles from "../styles/Playground.module.scss";
+import { motion } from "framer-motion";
 
 function Playground() {
   return (
     <div className={[styles.container, "container-fluid"].join(" ")}>
       <div className="row w-100">
         <div className="col-lg-3 col-md-5 col-12 d-flex align-items-center">
-          <div className={[styles.card, "card text-center"].join(" ")}>
+          <motion.div
+            layoutId={2}
+            className={[styles.card, "card text-center"].join(" ")}
+          >
             Advanced Animation
-          </div>
+          </motion.div>
         </div>
         <div
           className={[

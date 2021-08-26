@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -41,24 +42,30 @@ export default function Home() {
         <section className="row col-10 mx-auto">
           <div className="col-lg-6 col-md-6 col-12">
             <Link href="/basic" passHref={true}>
-              <div
+              <motion.div
+                layoutId={1}
                 className={[styles.card, "card text-center shadow-sm"].join(
                   " "
                 )}
+                animate={{ scale: 1 }}
+                whileHover={{ scale: 1.04 }}
               >
                 Basic Animation
-              </div>
+              </motion.div>
             </Link>
           </div>
           <div className="col-lg-6 col-md-6 col-12">
             <Link href="/playground" passHref={true}>
-              <div
+              <motion.div
+                layoutId={2}
                 className={[styles.card, "card text-center shadow-sm"].join(
                   " "
                 )}
+                animate={{ scale: 1 }}
+                whileHover={{ scale: 1.04 }}
               >
                 Advanced Animation
-              </div>
+              </motion.div>
             </Link>
           </div>
         </section>

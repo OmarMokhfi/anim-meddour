@@ -1,11 +1,13 @@
 import "../styles/globals.scss";
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout, MotionConfig } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AnimateSharedLayout>
-      <Component {...pageProps} />
-    </AnimateSharedLayout>
+    <MotionConfig transition={{ duration: 0.3 }}>
+      <AnimateSharedLayout type="switch">
+        <Component {...pageProps} />
+      </AnimateSharedLayout>
+    </MotionConfig>
   );
 }
 
